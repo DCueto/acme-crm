@@ -1,0 +1,14 @@
+
+:host{
+  display: grid;
+  grid-template-columns: 1fr 75vw 1fr;
+  grid-template-rows: 1fr 80vh;
+  grid-template-areas: "aside header header" "aside dashboard dashboard";
+}
+
+@media screen and ( width < 600px ) {
+  
+  // :host{
+  //   grid-template-areas: "header header" "dashboard dashboard";
+  // }
+}
