@@ -1,8 +1,8 @@
-@import '../../styles/custom';
+@import '../../../styles/custom';
 
 :host{
   display: flex;
   grid-area: main;
-  background-color: lightblue;
+  background-color: orange;
   @include center-content;
 }

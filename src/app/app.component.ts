@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { AsideComponent } from './aside/aside.component';
+import { NavbarComponent } from './layout/navbar/navbar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './layout/header/header.component';
 
 @Component({
   selector: 'acme-root',
   standalone: true,
-  imports: [AsideComponent, DashboardComponent, HeaderComponent],
+  imports: [NavbarComponent, DashboardComponent, HeaderComponent, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
