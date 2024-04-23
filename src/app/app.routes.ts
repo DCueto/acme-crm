@@ -16,7 +16,6 @@ export const routes: Routes = [
       { path: 'customer', loadChildren: () => 
         import('./customer/customers/customers.routes')
           .then( mod => {
-              console.log( mod );
               return mod.CUSTOMER_ROUTES;
           })
       },

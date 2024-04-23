@@ -13,7 +13,7 @@ export class CustomerDetailComponent implements OnInit {
   @Input({transform: numberAttribute}) id = 0;
 
   ngOnInit(): void {
-    console.log( this.id );
+    // console.log( this.id );
   }
 
 }

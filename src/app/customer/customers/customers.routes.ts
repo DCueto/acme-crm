@@ -5,13 +5,13 @@ import { CustomerDetailComponent } from "../customer-detail/customer-detail.comp
 import { CustomerFormComponent } from "../customer-form/customer-form.component";
 
 export const CUSTOMER_ROUTES: Route[] = [
-  {path: '', component: CustomersComponent, 
-  children: [
-    { path: 'customers', component: CustomerListComponent},
-    { path: 'detail/:id', component: CustomerDetailComponent },
-    { path: 'new', component: CustomerFormComponent },
-    { path: 'edit/:id', component: CustomerFormComponent }
-  ]
+  { path: '', component: CustomersComponent, 
+    children: [
+      { path: 'customers', component: CustomerListComponent},
+      { path: 'detail/:id', component: CustomerDetailComponent },
+      { path: 'new', component: CustomerFormComponent },
+      { path: 'edit/:id', component: CustomerFormComponent }
+    ]
   },
 
 ]
