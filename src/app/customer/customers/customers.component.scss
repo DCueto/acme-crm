@@ -5,4 +5,9 @@
   grid-area: main;
   background-color: orange;
   @include center-content;
+  flex-direction: column;
+}
+
+nav{
+  display: block;
 }

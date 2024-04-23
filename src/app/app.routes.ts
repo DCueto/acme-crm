@@ -6,16 +6,23 @@ import { ProductListComponent } from './product/product-list/product-list.compon
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { LoginComponent } from './auth/login/login.component';
 import { LayoutComponent } from './layout/layout/layout.component';
+import { CustomerDetailComponent } from './customer/customer-detail/customer-detail.component';
 
 export const routes: Routes = [
   { path: '', component: LayoutComponent, 
     children: [
       { path: '', component: DashboardComponent },
       { path: 'dashboard', redirectTo: '' },
-      { path: 'customer', component: CustomerListComponent },
+      { path: 'customer', loadChildren: () => 
+        import('./customer/customers/customers.routes')
+          .then( mod => {
+              console.log( mod );
+              return mod.CUSTOMER_ROUTES;
+          })
+      },
       { path: 'order', component: OrderListComponent },
       { path: 'product', component: ProductListComponent },
-    ] 
+    ]
   },
   { path: 'login', component: LoginComponent },
   { path: '**', component: NotFoundPageComponent }
